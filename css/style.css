@@ -1,0 +1,499 @@
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Basic body styles and background gradient */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Transparent glass effect for navbar with blur */
+.glass-navbar {
+  background-color: rgba(15, 32, 39, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 999;
+}
+
+/* Navbar link hover color */
+.nav-link:hover {
+  color: #87cefa !important;
+}
+
+/* Spacer to offset fixed navbar height */
+body::before {
+  content: "";
+  display: block;
+  height: 70px;
+}
+
+/* Hero section styling */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 10px;
+  background: transparent;
+}
+
+/* Hero heading style with shadow */
+.hero-section h1 {
+  font-size: 2.8rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero paragraph style with shadow */
+.hero-section p {
+  font-size: 1.2rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive font sizes for hero text on wider screens */
+@media (min-width: 768px) {
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Profile image style and hover scale effect */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Fade-in animation */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Fade-in animation delays */
+.animate-fade-in.delay-0s {
+  animation-delay: 0s;
+}
+.animate-fade-in.delay-1s {
+  animation-delay: 0.6s;
+}
+.animate-fade-in.delay-2s {
+  animation-delay: 1.2s;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Container styling for About and Skills sections */
+.about-section-container,
+.skills-section-container {
+  padding: 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* Content width and color for About and Skills */
+.about-content,
+.skills-content {
+  max-width: 900px;
+  width: 90%;
+  color: #ddd;
+}
+
+/* Initial hidden state and translate for scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state when element scrolls into view */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings for About and Skills */
+.about-content h2,
+.skills-content h2 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Paragraph styling in About */
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  color: #ddd;
+}
+
+/* Styling for About section list */
+.about-list {
+  list-style: none;
+  padding-left: 1.2em;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* List items in About with icon positioning */
+.about-list li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 1.8em;
+  cursor: default;
+  color: #ddd;
+  font-size: 1.1rem;
+  user-select: none;
+}
+.about-list li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #0dcaf0;
+}
+
+/* Skills section headings */
+.skills-content h4 {
+  font-weight: 600;
+  color: #8db9ca;
+  margin-bottom: 1rem;
+}
+
+/* Soft blue text color helper */
+.text-softblue {
+  color: #8db9ca;
+}
+
+/* Individual skill container spacing */
+.skill {
+  margin-bottom: 20px;
+}
+
+/* Skill name styling */
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #cbd8e4;
+}
+
+/* Progress bar background */
+.progress {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* Progress bar fill styling */
+.progress-bar {
+  background-color: #0dcaf0;
+  height: 100%;
+  line-height: 20px;
+  color: #e9f9ff;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 8px;
+  border-radius: 12px 0 0 12px;
+  transition: width 1s ease;
+}
+
+/* Container for soft skill badges */
+.soft-skill-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Soft skill badge styling */
+.soft-badge {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  background-color: rgba(13, 202, 240, 0.15);
+  color: #0dcaf0;
+  cursor: default;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+/* Soft badge hover effect */
+.soft-badge:hover {
+  background-color: rgba(13, 202, 240, 0.35);
+  color: #cff4fc;
+  transform: scale(1.1);
+}
+
+/* Button hover shadow effect */
+.btn-hover-shadow {
+  transition: box-shadow 0.3s ease;
+}
+.btn-hover-shadow:hover,
+.btn-hover-shadow:focus {
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.7);
+  outline: none;
+}
+
+/* Responsive padding adjustment for small screens */
+@media (max-width: 576px) {
+  .about-section-container,
+  .skills-section-container {
+    height: auto;
+    padding: 40px 0;
+  }
+}
+
+/* Projects section container spacing */
+.projects-section-container {
+  padding: 60px 0;
+  background: transparent;
+}
+
+/* Projects section max width and color */
+.projects-section {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #eee;
+}
+
+/* Section title style */
+.section-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #87cefa;
+}
+
+/* Grid layout for projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Individual project card style */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Project card hover effect */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 191, 255, 0.3);
+}
+
+/* Project title style */
+.project-card h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #00bfff;
+}
+
+/* Project description text */
+.project-card p {
+  font-size: 0.95rem;
+  color: #cbd8e4;
+  margin-bottom: 15px;
+}
+
+/* Tech stack tags styling */
+.tech-stack span {
+  display: inline-block;
+  background: rgba(0, 191, 255, 0.3);
+  color: #b0dfff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-right: 8px;
+  margin-bottom: 6px;
+}
+
+/* Small button size adjustment */
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 6px 16px;
+}
+
+/* Slide-up animation for elements */
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFade 0.7s ease forwards;
+}
+
+/* Animation delays for slide-up */
+.animate-slide-up.delay-1 {
+  animation-delay: 0.3s;
+}
+.animate-slide-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes for slide-up fade */
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Flip card container */
+.flip-card {
+  background: transparent;
+  width: 250px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+}
+
+/* Inner flip card for rotation */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+
+/* Rotate flip card on hover and focus */
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces of flip card */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  color: #cbd8e4;
+}
+
+/* Front face styling */
+.flip-card-front {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(13, 202, 240, 0.15);
+}
+.flip-card-front h5 {
+  margin-bottom: 0.3rem;
+  color: #0dcaf0;
+}
+
+/* Back face styling */
+.flip-card-back {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(13, 202, 240, 0.1);
+  color: #cbd8e4;
+  font-weight: 600;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+/* Button style inside flip card back */
+.flip-card-back a.btn {
+  color: #0dcaf0;
+  font-weight: 600;
+  border: 2px solid #0dcaf0;
+  background: transparent;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Flip card back button hover */
+.flip-card-back a.btn:hover {
+  background-color: #0dcaf0;
+  color: #1a1a1a;
+  border-color: #0dcaf0;
+}
+
+/* Container for contact links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Styling for each contact link */
+.contact-link {
+  color: #0dcaf0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border: 2px solid #0dcaf0;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Icons inside contact links */
+.contact-link i {
+  font-size: 1.3rem;
+}
+
+/* Hover and focus styles for contact links */
+.contact-link:hover,
+.contact-link:focus {
+  background-color: #0dcaf0;
+  color: #1a1a1a;
+  outline: none;
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.7);
+  text-decoration: none;
+}
