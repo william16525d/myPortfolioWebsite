@@ -187,99 +187,251 @@
         <div class="container">
           <h2 class="section-title text-center mb-5">What I've built</h2>
 
-          <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card animate-slide-up">
-              <h3>Q&A Feature For Full Stack Group Project</h3>
-              <p>
-                A dynamic Q&A tool built with Node.js, Express, PostgreSQL, and
-                Prisma that facilitates real-time question and answer sessions.
-              </p>
-              <div class="tech-stack">
-                <span>HTML & CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>PostgreSQL</span>
-                <span>Prisma</span>
-              </div>
-              <a
-                href="https://cicd-assignment-group5-bnb0bdbjfsgzbmhz.southeastasia-01.azurewebsites.net/"
-                class="btn btn-primary btn-sm mt-3"
-                target="_blank"
-                rel="noopener"
-                >View Live</a
-              >
-              <div class="mb-2 mt-3" style="font-size: 0.9rem; color: #ccc">
-                <strong>Test Login:</strong> Username: <code>Alice</code>,
-                Password: <code>Alice123</code>
-              </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card animate-slide-up">
-              <h3 class="mb-3">Database Systems Project</h3>
-              <p>
-                A comprehensive backend-focused project demonstrating PostgreSQL
-                database integration, RESTful APIs, and admin analytics
-                dashboards.
-              </p>
-              <div class="tech-stack">
-                <span class="soft-badge">PostgreSQL</span>
-                <span class="soft-badge">Node.js</span>
-                <span class="soft-badge">Express</span>
-                <span class="soft-badge">REST API</span>
-                <span class="soft-badge">User Authentication</span>
-                <span class="soft-badge">Data Analytics</span>
-              </div>
-              <div class="mt-3">
-                <a
-                  href="https://github.com/william16525d/cloned_dbsAssignment"
-                  target="_blank"
-                  class="btn btn-primary btn-sm mt-3"
+          <div class="accordion" id="projectsAccordion">
+            <!-- Project 1: Q&A Feature -->
+            <div class="accordion-item project-card animate-slide-up">
+              <h2 class="accordion-header" id="headingQA">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseQA"
+                  aria-expanded="false"
+                  aria-controls="collapseQA"
                 >
-                  <i class="fa fa-database me-1"></i> View Repository
-                </a>
-              </div>
-              <div class="mb-2 mt-3" style="font-size: 0.9rem; color: #ccc">
-                <strong>Note:</strong> This repository is a cloned version due
-                to privacy restrictions from the school.
+                  Q&A Feature For Full Stack Group Project
+                </button>
+              </h2>
+              <div
+                id="collapseQA"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingQA"
+                data-bs-parent="#projectsAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    A dynamic Q&A tool built with Node.js, Express, PostgreSQL,
+                    and Prisma that facilitates real-time question and answer
+                    sessions.
+                  </p>
+                  <ul>
+                    <li>
+                      Frontend: Built with HTML and CSS to create a clean,
+                      responsive layout with a modern and user-friendly
+                      interface. Enhanced responsiveness ensures accessibility
+                      across devices of all sizes.
+                    </li>
+                    <li>
+                      Interactivity: JavaScript powers the dynamic behavior,
+                      enabling smooth toggling of Q&A panels, client-side
+                      validations, and seamless user experience.
+                    </li>
+                    <li>
+                      Backend: Developed using Node.js and Express, providing a
+                      robust RESTful API architecture that handles routing,
+                      middleware, and business logic for Q&A CRUD operations.
+                    </li>
+                    <li>
+                      Database: Leveraged NeonDB (PostgreSQL) for structured,
+                      cloud-hosted relational data storage, ensuring scalability
+                      and reliability.
+                    </li>
+                    <li>
+                      ORM: Utilized Prisma as the Object-Relational Mapping tool
+                      to simplify database interactions, enforce schema
+                      consistency, and streamline query operations.
+                    </li>
+                  </ul>
+                  <div class="tech-stack mb-3">
+                    <span class="soft-badge">HTML</span>
+                    <span class="soft-badge">CSS</span>
+                    <span class="soft-badge">JavaScript</span>
+                    <span class="soft-badge">REST API</span>
+                    <span class="soft-badge">User Authentication</span>
+                    <span class="soft-badge">Express</span>
+                    <span class="soft-badge">Node.js</span>
+                    <span class="soft-badge">PostgreSQL</span>
+                    <span class="soft-badge">Prisma</span>
+                  </div>
+                  <div class="mb-2" style="font-size: 0.9rem; color: #ccc">
+                    <strong>Test Login:</strong> Username: <code>Alice</code>,
+                    Password: <code>Alice123</code>
+                  </div>
+                  <a
+                    href="https://cicd-assignment-group5-bnb0bdbjfsgzbmhz.southeastasia-01.azurewebsites.net/"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary btn-sm"
+                  >
+                    View Live
+                  </a>
+                  <div class="mt-3" style="font-size: 0.9rem; color: #ccc">
+                    <strong>Note:</strong> This production server takes some
+                    time to load.
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card animate-slide-up delay-2">
-              <h3>Personal Portfolio Website</h3>
-              <p>
-                A responsive and visually appealing portfolio site built with
-                HTML, CSS, JavaScript, and Bootstrap. It showcases my skills,
-                projects, and contact information with smooth animations and
-                easy navigation.
-              </p>
-              <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
+            <!-- Project 2: Database Systems Project -->
+            <div class="accordion-item project-card animate-slide-up">
+              <h2 class="accordion-header" id="headingDBS">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseDBS"
+                  aria-expanded="false"
+                  aria-controls="collapseDBS"
+                >
+                  Database Systems Project
+                </button>
+              </h2>
+              <div
+                id="collapseDBS"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingDBS"
+                data-bs-parent="#projectsAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    A comprehensive backend-focused project demonstrating
+                    PostgreSQL database integration, RESTful APIs, and admin
+                    analytics dashboards.
+                  </p>
+                  <ul>
+                    <li>
+                      Node.js & Express Framework: Built a modular and
+                      maintainable backend using Express.js, handling all core
+                      RESTful routes, middleware functions, and request/response
+                      logic.
+                    </li>
+                    <li>
+                      Custom Stored Procedures in SQL: Wrote optimized stored
+                      procedures to process and return user spending analytics
+                      by age group, gender, and membership tier, offloading
+                      computation to the database for better performance.
+                    </li>
+                    <li>
+                      Role-Based Authentication & Authorization: Implemented
+                      secure login and session management for both Admin and
+                      User roles. Defined access control for different routes
+                      and dashboard functionalities.
+                    </li>
+                    <li>
+                      RESTful API Design & CRUD Operations: Developed scalable
+                      REST APIs for managing user authentication, product
+                      reviews, and favorite listings. Covered full CRUD
+                      lifecycle for backend data resources.
+                    </li>
+                    <li>
+                      MVC Architecture: Applied the Model-View-Controller design
+                      pattern to separate concerns — handling database logic in
+                      models, API control in controllers, and routing
+                      independently.
+                    </li>
+                  </ul>
+                  <div class="tech-stack mb-3">
+                    <span class="soft-badge">PostgreSQL</span>
+                    <span class="soft-badge">Node.js</span>
+                    <span class="soft-badge">Express</span>
+                    <span class="soft-badge">REST API</span>
+                    <span class="soft-badge">User Authentication</span>
+                    <span class="soft-badge">Data Analytics</span>
+                  </div>
+                  <a
+                    href="https://github.com/william16525d/cloned_dbsAssignment"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary btn-sm"
+                  >
+                    <i class="fa fa-database me-1"></i> View Repository
+                  </a>
+                  <div class="mt-3" style="font-size: 0.9rem; color: #ccc">
+                    <strong>Note:</strong> This repository is a cloned version
+                    due to privacy restrictions from the school.
+                  </div>
+                </div>
               </div>
-              <a
-                href="#"
-                class="btn btn-primary btn-sm mt-3"
-                target="_blank"
-                rel="noopener"
+            </div>
+
+            <!-- Project 3: Personal Portfolio Website -->
+            <div class="accordion-item project-card animate-slide-up delay-2">
+              <h2 class="accordion-header" id="headingPortfolio">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsePortfolio"
+                  aria-expanded="false"
+                  aria-controls="collapsePortfolio"
+                >
+                  Personal Portfolio Website
+                </button>
+              </h2>
+              <div
+                id="collapsePortfolio"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingPortfolio"
+                data-bs-parent="#projectsAccordion"
               >
-                Details
-              </a>
-              <a
-                href="https://github.com/william16525d/myPortfolioWebsite"
-                class="btn btn-primary btn-sm mt-3"
-                target="_blank"
-                rel="noopener"
-              >
-                Source Code
-              </a>
+                <div class="accordion-body">
+                  <p>
+                    A responsive and visually appealing portfolio site built
+                    with HTML, CSS, JavaScript, and Bootstrap. It showcases my
+                    skills, projects, and contact information with smooth
+                    animations and easy navigation.
+                  </p>
+                  <ul>
+                    <li>
+                      Uses Bootstrap’s grid and custom CSS for a sleek,
+                      dark-themed layout with glass effects and smooth hover
+                      animations.
+                    </li>
+                    <li>
+                      JavaScript adds scroll-triggered fade-in and slide-up
+                      animations, plus interactive flip cards for
+                      certifications.
+                    </li>
+                    <li>
+                      Sticky transparent navbar with smooth scrolling and
+                      mobile-friendly collapsible menu.
+                    </li>
+                    <li>
+                      Showcases skills with progress bars and badges, projects
+                      in expandable accordion cards, and certifications linking
+                      to verified certificates.
+                    </li>
+                    <li>
+                      Includes accessible contact links with social icons and
+                      keyboard-friendly interactions.
+                    </li>
+                  </ul>
+                  <div class="tech-stack mb-3">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary btn-sm me-2"
+                    target="_blank"
+                    rel="noopener"
+                    >Details</a
+                  >
+                  <a
+                    href="https://github.com/william16525d/myPortfolioWebsite"
+                    class="btn btn-primary btn-sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
+          <!-- end accordion -->
         </div>
       </div>
     </section>

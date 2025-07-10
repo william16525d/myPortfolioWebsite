@@ -497,3 +497,122 @@ body::before {
   box-shadow: 0 0 15px rgba(13, 202, 240, 0.7);
   text-decoration: none;
 }
+
+/* Projects Section Container */
+.projects-section-container {
+  background: transparent;
+  padding: 60px 0;
+}
+
+/* Section Title */
+.section-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  color: #87cefa;
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 0 0 8px #0dcaf0;
+}
+
+/* Accordion card container styling for each project */
+.accordion-item.project-card {
+  background: linear-gradient(135deg, #0dcaf0aa, #004e7acc);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  border: none;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Slight zoom effect on hover */
+.accordion-item.project-card:hover {
+  transform: scale(1.03);
+  z-index: 10;
+}
+
+/* Accordion header button styling */
+.accordion-button {
+  background: transparent !important;
+  color: #c4eaff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover style for accordion button */
+.accordion-button:hover {
+  background-color: rgba(13, 202, 240, 0.3) !important;
+  color: #00f0ff;
+}
+
+/* Accordion content body styling */
+.accordion-body {
+  color: #bbdefbdd;
+  font-size: 1rem;
+  padding: 1rem 2rem 2rem 2rem;
+  border-top: 1px solid rgba(13, 202, 240, 0.2);
+  line-height: 1.5;
+  background: rgba(13, 202, 240, 0.06);
+  border-radius: 0 0 16px 16px;
+  user-select: text;
+}
+
+/* Paragraph spacing inside accordion body */
+.accordion-body p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* List items inside accordion body */
+.accordion-body ul li {
+  margin-bottom: 0.6rem;
+  color: #a6d7ff;
+  font-weight: 400;
+  cursor: default;
+}
+
+/* Tech stack badge styling */
+.tech-stack span {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background-color: rgba(13, 202, 240, 0.15);
+  color: #0dcaf0;
+  cursor: default;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for tech stack badges */
+.tech-stack span:hover {
+  background-color: rgba(13, 202, 240, 0.35);
+  color: #cff4fc;
+  transform: scale(1.1);
+}
+
+/* Button inside accordion body */
+.accordion-body a.btn {
+  background-color: #0dcaf0;
+  color: #1a1a1a;
+  padding: 0.4rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hover and focus effect for button */
+.accordion-body a.btn:hover,
+.accordion-body a.btn:focus {
+  background-color: #00e0ff;
+  color: #111;
+  outline: none;
+}
